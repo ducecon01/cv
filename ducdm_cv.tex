@@ -1,0 +1,171 @@
+%Source: https://github.com/duetosymmetry/cv
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+\documentclass[margin,line]{res}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=cyan,      
+    urlcolor=cyan
+    }
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+\usepackage[normalem]{ulem}
+\usepackage{datetime}
+\usepackage[english]{babel}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\voffset -25pt
+%\topmargin -.2in
+\headsep 25pt
+\textwidth=6.0in
+\textheight=9.2in
+\itemsep=0in
+\parsep=0in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Manh-Duc DOAN --- Curriculum Vitae}
+\chead{}
+\rhead{\thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{Updated: \today }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%Bib management
+\usepackage{multibib}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+
+\begin{document}
+
+\newcommand{\myname}{\huge{Manh-Duc DOAN}}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+\input{contact.tex}
+
+% \section{\sc Citizenship}
+% Viet Nam
+
+\section{\sc Education}
+\textbf{Foreign Trade University, Vietnam}\\
+{\bf B.S.} in International Economics \hfill {\bf March 2025 \it{(expected)}}\\
+% \vspace*{-.1in}
+% \begin{itemize}
+% 	\item[ ] Advisor: Associate Prof. PhD.\ Chu Thi Mai Phuong
+% 	\item[ ] Essay Title: {\it }
+% 	\item[ ] G.P.A.: 3.8/4
+% \end{itemize}
+\textbf{Foreign Trade University, Vietnam}\\
+\textbf{Training Program} \textit{“Data Science in Economics and Business”} \hfill {\bf September 2023}\\
+
+\vspace*{4mm}
+
+\section{\sc Research Interests}
+	Development Economics, Labor Economics, Experimental Economics\\
+	Econometrics, Applied Data Science\\
+
+\vspace{4mm}
+
+\section{\sc Grants, Scholarship, Honors and Awards}
+Encouragement Scholarship for Outstanding Academic Results, FTU \hfill \textbf{6/2022; 12/2022}\\
+Third Prize in the Student Research Competition in Economics and Business, FTU \hfill  \textbf{2022-2023}\\
+Second Prize in the Student Research Competition in Economics and Business, FIE, FTU \hfill \textbf{2022-2023}\\
+Encouragement Prize in Excellent Student National Concours in French, Vietnam \hfill \textbf{2021-2022}\\
+First Prize in Excellent Student Regional Concours in French, Nghe An, Vietnam \hfill \textbf{2021-2022}\\
+
+\vspace{4mm}
+
+\section{\sc Membership}
+
+\textbf{AcLab+ Econ}\\
+Research Membership \hfill \textbf{July 2023 - }\\
+\textbf{Vietnam Institute of Economics and Policy Research (VEPR)}\\
+Research Internship \hfill \textbf{July 2023 - October 2023}
+
+\section{\sc Academic Experience}
+{\bf Teaching Assistant}, Foreign Trade University
+\begin{itemize}
+\item[ ] Impact Evaluation. Professor: Do Ngoc Kien \hfill \textbf{Fall 2023}
+\end{itemize}
+
+\vspace{4mm}
+
+\section{\sc Skills}
+{\bf Languages ---}
+\vspace*{.05in}
+Vietnamese (native), English (B2), French (C1)\\
+{\bf Computer skills}
+\vspace*{.05in}
+\begin{itemize}
+	\item Programming: Python, R, SQL
+        \item Statistic software: Stata, Eviews
+	\item Markup languages: \LaTeX, Markdown
+        \item Others: Microsoft Office (Word, Excel, PowerPoints, Access, PowerBI)
+	\item Open-source contributions: \url{https://github.com/ducecon01}
+\end{itemize}
+
+\vspace{4mm}
+
+% \newpage
+
+\input{publication.tex}
+
+\input{conference.tex}
+
+%\newpage{}
+
+\section{\sc References}
+\vspace*{.05in}
+% \parbox{\textwidth}{
+% {\bf Ass., PhD. Tu Thuy Anh,} Editor-in-chief of \textit{Journal of International Economics and Management}, Foreign Trade University\\
+% B301, 91 Chua Lang str., Dong Da dist., Hanoi, Vietnam \\
+% Email: \href{mailto:thuyanhtu@ftu.edu.vn}{thuyanhtu@ftu.edu.vn}}
+
+\par
+\parbox{\textwidth}{
+{\bf PhD. Do Ngoc Kien,} Head of Department of Economics and Management, School of International Economics and Business, Foreign Trade University \\
+B202, 91 Chua Lang str., Dong Da dist., Hanoi, Vietnam \\
+Email: \href{mailto:dongockien@ftu.edu.vn}{dongockien@ftu.edu.vn}} \\
+
+\par
+\parbox{\textwidth}{
+{\bf PhD. Vu Thi Phuong Mai,} Lecturer in Econometrics, Faculty of International Economics, Foreign Trade University\\
+B208, 91 Chua Lang str., Dong Da dist., Hanoi, Vietnam \\
+Email: \href{mailto:maivtp@ftu.edu.vn}{maivtp@ftu.edu.vn}}
+
+% \par
+% \parbox{\textwidth}{
+% {\bf PhD. Chu Thi Mai Phuong,} Lecturer in Forecasting in Economics and Business, Faculty of International Economics, Foreign Trade University\\
+% B208, 91 Chua Lang str., Dong Da dist., Hanoi, Vietnam \\
+% Email: \href{mailto:maivtp@ftu.edu.vn}{maivtp@ftu.edu.vn}}
+
+% \par
+% \parbox{\textwidth}{
+% {\bf PhD. Nguyen Quoc Viet,} Deputy Director of the Vietnam Institute of Economic and Policy Research (VEPR), University of Economics, Vietnam National University\\
+% E404, 144 Xuan Thuy str., Cau Giay dist., Hanoi, Vietnam \\
+% Email: \href{mailto:vietnq@vnu.edu.vn}{vietnq@vnu.edu.vn}}
+
+\end{resume}
+\end{document}
+
+% Local Variables:
+% mode: latex
+% End:
